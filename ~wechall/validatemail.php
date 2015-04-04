@@ -1,12 +1,10 @@
 <?php
     /**
-        Stereotyped Challenges
-        https://chall.stypr.com/
-        /~wechall/validatemail.php @ 2015-04-04
-    **/
-    /*
-    Usage: /~wechall/validatemail.php?authkey=blah&username=stypr&email=stypr7@gmail.com
-    */
+     * Stereotyped Challenges
+     * https://chall.stypr.com/
+     * /~wechall/validatemail.php @ 2015-04-04
+     * Usage: /~wechall/validatemail.php?authkey=blah&username=stypr&email=stypr7@gmail.com
+     **/
     error_reporting(0);
     require("../init.php");
     if(TEMPLATE === "TEMPLATE") exit;

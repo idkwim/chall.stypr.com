@@ -1,9 +1,9 @@
 <?php
     /**
-        Stereotyped Challenges
-        https://chall.stypr.com/
-        init.php @ 2015-04-04
-    **/
+     * Stereotyped Challenges
+     * https://chall.stypr.com/
+     * init.php @ 2015-04-04
+     **/
 
 
     // Initial Config
@@ -12,7 +12,7 @@
     define("SQL_PASS", "stypr");        // MySQL_password
     define("SQL_NAME", "stypr");        // Database Name
     define("__WECHALL__", "wechall");   // WECHALL CODE
-    define("TEMPLATE", "./static/");   // template dir.
+    define("TEMPLATE", "./~static/");   // template dir.
 
 
     // Global Functions

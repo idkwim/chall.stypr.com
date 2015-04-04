@@ -1,13 +1,13 @@
 <?php
     /**
-        Stereotyped Challenges
-        https://chall.stypr.com/
-        /~wechall/userscore.php @ 2015-04-04
-    **/
-    /*
-    Usage: /~wechall/userscore.php?authkey=blah&username=stypr
-	Valid Output: username:rank:score:maxscore:challssolved:challcount:usercount
-    */
+     * Stereotyped Challenges
+     * https://chall.stypr.com/
+     * /~wechall/userscore.php @ 2015-04-04
+     * Usage: /~wechall/userscore.php?authkey=blah&username=stypr
+     * Valid Output: username:rank:score:maxscore:challssolved:challcount:usercount
+     **/
+
+
     error_reporting(0);
     require("../init.php");
     if(TEMPLATE === "TEMPLATE") exit;

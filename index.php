@@ -1,9 +1,11 @@
 <?php
     /**
-        Stereotyped Challenges
-        https://chall.stypr.com/
-        index.php @ 2015-04-04
-    **/
+     * Stereotyped Challenges
+     * https://chall.stypr.com/
+     * index.php @ 2015-04-04
+     **/
+
+
     error_reporting(0);
     require("init.php");
     if(TEMPLATE === "TEMPLATE") exit;
