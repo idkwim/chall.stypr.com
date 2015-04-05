@@ -13,13 +13,13 @@
     if($_POST){ # action query
         switch($query){
             case "login":
-                if(check_login() == false && $_POST) process_login($_POST);
+                if(check_login() === false && $_POST) process_login($_POST);
                 break;
             case "register":
-                if(check_login() == false && $_POST) process_register($_POST);
+                if(check_login() === false && $_POST) process_register($_POST);
                 break;
             case "auth":
-                if(check_login() == true && $_POST)  process_auth($_POST);
+                if(check_login() === true && $_POST)  process_auth($_POST);
                 break;
         }
     }else{ # load query
@@ -37,6 +37,9 @@
         }else{
             import_page("true/header");
             switch($query){
+                case "profile":
+                    import_page("true/profile");
+                    break;
                 case "intro":
                     import_page("true/intro");
                     break;
@@ -46,8 +49,8 @@
                 case "chall":
                     import_page("true/chall");
                     break;
-                case "rank":
-                    import_page("true/rank");
+                case "score":
+                    import_page("true/score");
                     break;
                 case "logout":
                     logout();

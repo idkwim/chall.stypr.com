@@ -38,3 +38,6 @@ body{display:table-cell;text-align:center;vertical-align:middle;word-spacing:.2e
 .placeholders h4{margin-bottom:0}
 .placeholder{margin-bottom:20px}
 .placeholder img{display:inline-block;border-radius:50%}
+.avatar{border-radius: 10em; margin:10px; border: 2px solid #cccccc; cursor:pointer;width:120px;}
+.side_avatar{border-radius: 10em; border: 1px solid #cccccc; cursor:pointer;width:16px; padding:0; margin:0;}
+.authlog{max-height:100px;min-height:100px;min-width:100%;max-width:100%;padding:5px;margin-bottom:10px;border-radius:.5em;font-size:10pt;}
