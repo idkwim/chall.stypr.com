@@ -36,10 +36,10 @@
                         </center></li>
                     </ul>
                     <hr>
-                    <ul class="nav nav-sidebar" style="text-align:right; font-size:13pt;">
+                    <ul class="nav nav-sidebar" style="text-align:right; font-size:13pt; font-weight:200;">
                         <li <? if($query==="intro" || !$query){ ?> class="active"<?}?>><a href="?intro">NOTICE</a></li>
                         <li <? if($query==="chall"){ ?> class="active"<?}?>><a href="?chall">CHALLENGE</a></li>
-                        <li <? if($query==="score"){ ?> class="active"<?}?>><a href="?score">SCOREBOARD</a></li>
+                        <li <? if($query==="score" || $query === "profile"){ ?> class="active"<?}?>><a href="?score">SCOREBOARD</a></li>
                         <li <? if($query==="memo"){ ?> class="active"<?}?>><a href="?memo">MEMO</a></li>
                         <li><a href="?logout">LOGOUT</a></li>
                     </ul>

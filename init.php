@@ -20,7 +20,7 @@
     header("Content-Type: text/html; charset=utf-8");
     session_name("stypr");
     session_start();
-    $db = mysql_connect(SQL_HOST, SQL_PASS, SQL_PASS);
+    $db = mysql_connect(SQL_HOST, SQL_USER, SQL_PASS);
     if(!$db) die("err");
     mysql_select_db(SQL_NAME);
     $query = filter_string(explode("&", $_SERVER['QUERY_STRING']));
