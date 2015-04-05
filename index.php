@@ -10,11 +10,8 @@
     require("init.php");
     if(TEMPLATE === "TEMPLATE") exit;
 
-    if($_POST){
+    if($_POST){ # action query
         switch($query){
-            case "logout":
-                logout();
-                break;
             case "login":
                 if(check_login() == false && $_POST) process_login($_POST);
                 break;
@@ -22,42 +19,43 @@
                 if(check_login() == false && $_POST) process_register($_POST);
                 break;
             case "auth":
-                if(check_login() == true && $_POST) process_auth($_POST);
+                if(check_login() == true && $_POST)  process_auth($_POST);
                 break;
         }
-    }else{
-        import_page("header");
-        switch($query){
-            case "login":
-                if(check_login() == false){
-                    import_page("login");
-                }else{
-                    goto load_intro;
-                }
-                break;
-            case "register":
-                if(check_login() == false){
-                    import_page("register");
-                }else{
-                    goto load_intro;
-                }
-                break;
-            case "intro":
-                import_page("intro");
-                break;
-            case "memo":
-                import_page("memo");
-                break;
-            case "chall":
-                import_page("chall");
-                break;
-            case "rank":
-                import_page("rank");
-                break;
-            default:
-                load_intro:
-                import_page("intro");
+    }else{ # load query
+        if(check_login() == false){
+            import_page("false/header");
+            switch($query){
+                case "register":
+                    import_page("false/register");
+                    break;
+                default:
+                    import_page("false/login");
+                    break;
+            }
+            import_page("false/footer");
+        }else{
+            import_page("true/header");
+            switch($query){
+                case "intro":
+                    import_page("true/intro");
+                    break;
+                case "memo":
+                    import_page("true/memo");
+                    break;
+                case "chall":
+                    import_page("true/chall");
+                    break;
+                case "rank":
+                    import_page("true/rank");
+                    break;
+                case "logout":
+                    logout();
+                    break;
+                default:
+                    import_page("true/intro");
+            }
+            import_page("true/footer");
         }
-        import_page("footer");
     }
 ?>

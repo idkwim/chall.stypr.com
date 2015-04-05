@@ -28,7 +28,7 @@
         /* filter any valid inputs */
         switch($type){
             case "url":
-                return preg_replace("/[^a-zA-Z0-9-_&=]/", "", $str);
+                return preg_replace("/[^a-zA-Z0-9-_&\/]/", "", $str);
                 break;
             default:
                 return preg_replace("/[^a-zA-Z0-9-_!@#$.%^&*()가-힣]/", "", $str);
@@ -51,7 +51,8 @@
         /* Destroy the session */
         session_destroy();
         $_SESSION = array();
-        header("Location: /");
+        echo("Redirecting... Please wait....<script>document.location.href='./';</script>");
+        exit;
     }
     function get_score(){
         $q = mysql_fetch_assoc(mysql_query("SELECT score FROM user WHERE username='" . filter_string($_SESSION['username'], "sql") . "'"));

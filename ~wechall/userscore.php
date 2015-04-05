@@ -17,8 +17,8 @@
 	$username  = filter_string($_REQUEST['username']);
 	if($authkey !== __WECHALL__) die("access denied..");
 
-    $s = mysql_fetch_assoc(mysql_query("SELECT nickname, score FROM user WHERE nickname='" . filter_string($username, "sql") . "'"));
-    if($s['nickname'] === $username){
+    $statistics = mysql_fetch_assoc(mysql_query("SELECT nickname, score FROM user WHERE nickname='" . filter_string($username, "sql") . "'"));
+    if($statistics['nickname'] === $username){
         $statistics = "SELECT concat(nickname, ':". RANK_PREFIX .":', 
                                    score, ':', 
                                    (select SUM(score) FROM chal), ':',
